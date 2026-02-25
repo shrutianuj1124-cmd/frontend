@@ -1,14 +1,14 @@
 .blogDetails {
     background-color: #fff;
+    padding-top: 80px;
+    /* Space below header */
 }
 
 .wrapper {
     max-width: 900px;
-    margin: -60px auto 80px;
-    background: #fff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 80px;
+    /* Centered with bottom margin */
+    padding: 0 20px;
     position: relative;
     z-index: 10;
 }
@@ -25,15 +25,18 @@
 }
 
 .backLink:hover {
+    color: var(--accent-dark);
     transform: translateX(-5px);
 }
 
 .mainImage {
     width: 100%;
     aspect-ratio: 16/9;
-    border-radius: 12px;
+    border-radius: 15px;
+    /* Rounded corners */
     overflow: hidden;
     margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .mainImage img {
@@ -54,8 +57,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #666;
-    font-size: 0.95rem;
+    color: #888;
+    /* Muted color */
+    font-size: 0.9rem;
 }
 
 .metaItem span {
@@ -63,24 +67,30 @@
 }
 
 .content {
-    line-height: 1.8;
-    color: #444;
-    font-size: 1.1rem;
+    line-height: 1.7;
+    /* Improved line height */
+    color: #333;
+    /* Darker for readability */
+    font-size: 1.125rem;
+    /* ~18px */
 }
 
 .content h2,
 .content h3 {
     color: var(--primary);
-    margin: 30px 0 15px;
+    margin: 40px 0 20px;
+    font-size: 1.8rem;
 }
 
 .content p {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    /* Proper paragraph spacing */
 }
 
 .content img {
     max-width: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
+    margin: 30px 0;
 }
 
 .loading,
