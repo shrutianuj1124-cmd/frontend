@@ -1,0 +1,164 @@
+.about {
+    background-color: var(--bg-white);
+    overflow: hidden;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 80px;
+}
+
+.imageCol {
+    flex: 1 1 450px;
+}
+
+.contentCol {
+    flex: 1.2 1 500px;
+}
+
+.imageWrapper {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    transition: var(--transition-slow);
+}
+
+.imageWrapper:hover img {
+    transform: scale(1.05);
+}
+
+.experienceBadge {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: var(--accent);
+    color: #fff;
+    padding: 30px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 194, 168, 0.3);
+}
+
+.experienceBadge h3 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.experienceBadge p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.experienceBadge span {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tagline {
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.title span {
+    color: var(--accent);
+}
+
+.description {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.highlightItem {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 194, 168, 0.1);
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 800;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.text h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.text p {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .grid {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .imageCol,
+    .contentCol {
+        flex: 1 1 100%;
+    }
+
+    .imageWrapper img {
+        height: 400px;
+    }
+
+    .experienceBadge {
+        padding: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .experienceBadge h3 {
+        font-size: 2rem;
+    }
+}

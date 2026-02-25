@@ -1,0 +1,236 @@
+:root {
+    /* Color Palette */
+    --primary: #0f0f0f;
+    --accent: #00c2a8;
+    --accent-dark: #008e7a;
+    --bg-white: #ffffff;
+    --bg-grey: #f8f9fa;
+    --text-main: #333333;
+    --text-light: #666666;
+    --white: #ffffff;
+
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+
+    /* Spacing */
+    --section-padding: 100px 0;
+    --container-width: 1200px;
+    --border-radius: 12px;
+
+    /* Transitions */
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-main);
+    background-color: var(--bg-white);
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.revealLeft {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.revealLeft.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.revealRight {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.revealRight.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.revealScale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.revealScale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Staggered Delay Utilities */
+.delay1 {
+    transition-delay: 0.1s !important;
+}
+
+.delay2 {
+    transition-delay: 0.2s !important;
+}
+
+.delay3 {
+    transition-delay: 0.3s !important;
+}
+
+.delay4 {
+    transition-delay: 0.4s !important;
+}
+
+.delay5 {
+    transition-delay: 0.5s !important;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 100%;
+}
+
+button,
+.btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: var(--font-body);
+    font-weight: 700;
+    border-radius: 5px;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 14px 32px;
+    font-size: 0.95rem;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 194, 168, 0.2);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 12px 28px;
+    font-size: 0.95rem;
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+    padding: 12px 28px;
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+section {
+    padding: var(--section-padding);
+    position: relative;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --section-padding: 80px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem !important;
+    }
+
+    h2 {
+        font-size: 1.8rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem !important;
+    }
+}
